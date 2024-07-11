@@ -3,7 +3,14 @@
 // 测试3秒后返回结果
 
 export function getData(cb) { // 异步api
-	setTimeout(() => {
+	console.log("===")
+	// setTimeout(() => {
+	// 	console.log("cb")
+	// 	cb({name: "apple"})
+	// }, 2000)
+
+	setInterval(() => {
+		console.log("cb")
 		cb({name: "apple"})
 	}, 2000)
 }
@@ -11,7 +18,8 @@ export function getData(cb) { // 异步api
 export function getDataPromise() {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
+			console.log("promise")
 			resolve({name: "apple"})
-		}, 3000)
+		}, 2000)
 	})
 }
