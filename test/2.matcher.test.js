@@ -19,8 +19,8 @@ describe("查看常见的匹配器", function() {
 	})
 
 	it("判断包含关系", () => {
-		expect("apple").toContain("ap")
-		expect("apple").toMatch("l")
+		expect("apple").toContain("p")
+		expect("apple").toMatch("pl")
 		expect("apple").toMatch(/pp/) // match 可以写正则
 	})
 })
