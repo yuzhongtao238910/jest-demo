@@ -7,7 +7,12 @@ export function parser(str) {
 	const obj = {}
 
 	str.replace(/([^&=?])=([^&=?])+/g, function() {
-		obj[arguments[1]] = arguments[2]
+		let value = Number(arguments[2])
+		if (isNaN(value)) {
+			obj[arguments[1]] = arguments[2]
+		} else {
+			obj[arguments[1]] = value
+		}
 	})
 	return obj
 }
@@ -30,10 +35,10 @@ jest来测试：
 
 // console.log(parser("a=1&b=2")).  => {a:1, b: 2}
 
-console.log(stringify({
-	a: 1,
-	b: 2
-})) // {a:1, b: 2} => a=1&b=2
+// console.log(stringify({
+// 	a: 1,
+// 	b: 2
+// })) // {a:1, b: 2} => a=1&b=2
 
 
 
