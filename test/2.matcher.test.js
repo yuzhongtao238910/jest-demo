@@ -11,12 +11,12 @@ describe("查看常见的匹配器", function() {
 	})
 
 	// 说明这个文件 只测试这个
-	it.only("不相等关系", () => {
-		expect(1+1).not.toBe(1)
-		expect(1+1).toBeLessThan(4)
-		expect(1+1).toBeGreaterThan(1)
-		expect(1+1).toBeGreaterThanOrEqual(1)
-	})
+	// it.only("不相等关系", () => {
+	// 	expect(1+1).not.toBe(1)
+	// 	expect(1+1).toBeLessThan(4)
+	// 	expect(1+1).toBeGreaterThan(1)
+	// 	expect(1+1).toBeGreaterThanOrEqual(1)
+	// })
 
 	it("判断包含关系", () => {
 		expect("apple").toContain("p")
